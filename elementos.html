@@ -22,6 +22,14 @@
             </h1>         
             <nav>
                 <!-- Menús o iconos -->
+                <ul>
+                    <li>
+                        <a href="#">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="otra.html">Otra</a>
+                    </li>
+                </ul>
             </nav>
         </header>
         <aside>
@@ -62,8 +70,8 @@
 
             <h2>Imágenes</h2>
             <img height="156px"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Flag_of_Santander_Department.svg/1200px-Flag_of_Santander_Department.svg.png"
-                alt="Envío Local"/>
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Flag_of_Santander_Department.svg/1200px-Flag_of_Santander_Department.svg.png"
+            alt="Envío Local"/>
             <img height="156px" src="img/Flag_of_Colombia.svg.webp" alt="Envío Nacional">
 
             <h2>Tablas</h2>
@@ -102,6 +110,50 @@
                     </tr>
                 </tfoot>
             </table>
+            <br>
+            <h2>Formularios</h2>
+            <form action="#" method="post">
+                <label for="fecha">Fecha</label>
+                <input type="date" name="fecha" />
+                <br><br>
+                <label for="cliente">Cliente</label>
+                <input required type="text" name="cliente" placeholder="Escriba su nombre" />
+                <br><br>
+                <label for="cantidad">Cantidad</label>
+                <input type="number" name="cantidad" placeholder="Escriba la cantidad">
+                <br><br>
+                <label for="envio">Tipo de envío</label>
+                <input type="radio" name="envio" value="N"> Normal
+                <input type="radio" name="envio" value="E"> Express
+                <br><br>
+                <label for="">Horario entrega</label>
+                <input type="checkbox" name="horarios[]" value="1"> Jornada mañana
+                <input type="checkbox" name="horarios[]" value="2"> Jornada tarde
+                <input type="checkbox" name="horarios[]" value="3"> Jornada noche
+                <br/><br/>
+                <label for="producto">Producto</label>
+                <select name="producto">
+                    <option value="-1">Seleccione un producto</option>
+                    <option value="1">Memoria USB</option>
+                    <option value="2">Disco Duro</option>
+                    <option value="3">Mouse</option>
+                    <option value="4">Pantalla LCD</option>
+                </select>
+                <br/><br/>
+                <label for="observaciones">Observaciones</label>
+                <textarea placeholder="Escriba si tiene alguna observación para la entrega u otra cosa" name="observaciones" cols="40" rows="5"></textarea>
+                <!-- <input type="range" name="rango" value="50"> -->
+                <br/><br/>
+                <input type="button" name="boton" value="Botón">
+                <button type="button" name="boton2">Botón</button>
+                <br/><br/>
+                <input type="reset" value="Resetear">
+                <button type="reset">Resetear</button>
+                <br/><br/>
+                <input type="submit" name="enviar" value="Enviar">
+                <button>Enviar</button>
+
+            </form>
 
         </main>
         <br>
