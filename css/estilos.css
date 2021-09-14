@@ -1,0 +1,31 @@
+#titulo_enlaces{
+    background-color: lightblue;
+    color: darkmagenta;
+    text-align: center;
+    font-size: 32pt;
+}
+
+.fondo_naranja{
+    background-color: orange;
+    color: white;
+    font-size: 48pt;
+    text-align: right;
+}
+
+h2{
+    color: orange;    
+    font-size: 50pt;
+}
+
+h2{
+    background-color: white;
+    font-size: 16pt;
+}
+
+body{
+    background-color: aqua;
+}
+
+a:hover{
+    color: red;
+}
