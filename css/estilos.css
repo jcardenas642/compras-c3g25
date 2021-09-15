@@ -1,3 +1,8 @@
+#desordenadas li{
+    background-color: red;
+    margin-bottom: 8px;
+}
+
 #titulo_enlaces{
     background-color: lightblue;
     color: darkmagenta;
@@ -22,10 +27,26 @@ h2{
     font-size: 16pt;
 }
 
-body{
-    background-color: aqua;
+a:visited{
+    background-color: blue;
+    color: green;
+}
+
+a:link{
+    color: yellow;
+    font-size: 16pt;
+}
+
+
+a{
+    color: black;
 }
 
 a:hover{
-    color: red;
+    color: blue;
+}
+
+th:active{
+    
+    background-color: black;
 }
