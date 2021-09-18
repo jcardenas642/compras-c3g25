@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Compras</title>
+
+    <style>
+        body{
+            background-color: lightgrey;
+            display: grid;
+            grid-template-columns: 1fr 5fr ;
+            grid-template-rows: 80px 40px 1fr 32px ;
+            grid-auto-rows: 256px;
+            height: 100vh;
+            
+        }
+        header{
+            background-color: aqua;
+            grid-column: 1 / 3;
+            text-align: center;
+        }
+        nav{
+            background-color: blueviolet;
+            grid-column: 1 / span 2;
+            text-align: center;
+        }
+
+        nav li{
+            display: inline-block;
+        }
+        aside{
+            background-color: chocolate;
+            
+        }
+        main{
+            background-color: crimson;
+            text-align: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+           
+        }
+        footer{
+            background-color: darkgreen;
+          grid-column: 1 / 3;
+          text-align: center;
+        }
+        footer h1, footer h2, footer h3{
+            display: inline-block;
+            margin: 0;
+        }
+
+        .formulario{
+            grid-column: 2 / 3;
+            grid-row: 1/ span 2;
+        }
+
+        .tablas table{
+            margin: auto;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1 class="fondo_naranja">
+            <a target="_blank" href="https://misiontic2022.unab.edu.co">
+                <img width="80px" src="https://misiontic2022.mintic.gov.co/mtv2/assets/assets/images/logo-mision.png"
+                    alt="MisiónTIC 2022" />
+            </a>
+            Página de Elementos HTML
+        </h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">Inicio</a>
+            </li>
+            <li>
+                <a href="otra.html">Otra</a>
+            </li>
+        </ul>
+    </nav>
+    <aside>
+        <h2>Listas</h2>
+        <h3 class="fondo_naranja">Ordenadas</h3>
+        <ol>
+            <li>Local</li>
+            <li>Nacional</li>
+            <li>Internacional</li>
+        </ol>
+        <h3>Desordenadas</h3>
+        <ul id="desordenadas">
+            <li>Normal</li>
+            <li class="fondo_naranja">Express</li>
+            <li>
+                <a href="otra.html">Ir a la otra página</a>
+            </li>
+        </ul>
+        <dt> Glosario
+        <dd>Lenguaje de hipertexto de marcado</dd>
+        </dt>
+    </aside>
+    <main>
+        <div class="imagenes">
+            <h2>Imágenes</h2>
+            <img id="santander" height="156px"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Flag_of_Santander_Department.svg/1200px-Flag_of_Santander_Department.svg.png"
+                alt="Envío Local" />
+            <img height="156px" src="img/Flag_of_Colombia.svg.webp" alt="Envío Nacional">
+        </div>
+        <div class="tablas">
+            <h2>Tablas</h2>
+            <table border="1" width="50%">
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Producto</th>
+                        <th class="fondo_naranja">Cantidad</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">Juan</td>
+                        <td>Mouse</td>
+                        <td>4</td>
+                        <td>$200000</td>
+                    </tr>
+                    <tr>
+                        <td>Memoria USB</td>
+                        <td>10</td>
+                        <td class="fondo_naranja">$700000</td>
+                    </tr>
+                    <tr>
+                        <td>Maria</td>
+                        <td>Disco Duro</td>
+                        <td>2</td>
+                        <td>$240000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="3">Total Compras</th>
+                        <th>$1140000</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="formulario">
+            <h2>Formularios</h2>
+            <form action="#" method="post">
+                <label for="fecha">Fecha</label>
+                <input type="date" name="fecha" />
+                <br><br>
+                <label for="cliente">Cliente</label>
+                <input class="fondo_naranja" required type="text" name="cliente" placeholder="Escriba su nombre" />
+                <br><br>
+                <label for="cantidad">Cantidad</label>
+                <input type="number" name="cantidad" placeholder="Escriba la cantidad">
+                <br><br>
+                <label for="envio">Tipo de envío</label>
+                <input type="radio" name="envio" value="N"> Normal
+                <input type="radio" name="envio" value="E"> Express
+                <br><br>
+                <label for="">Horario entrega</label>
+                <input type="checkbox" name="horarios[]" value="1"> Jornada mañana
+                <input type="checkbox" name="horarios[]" value="2"> Jornada tarde
+                <input type="checkbox" name="horarios[]" value="3"> Jornada noche
+                <br /><br />
+                <label for="producto">Producto</label>
+                <select name="producto">
+                    <option value="-1">Seleccione un producto</option>
+                    <option value="1">Memoria USB</option>
+                    <option value="2">Disco Duro</option>
+                    <option value="3">Mouse</option>
+                    <option value="4">Pantalla LCD</option>
+                </select>
+                <br /><br />
+                <label for="observaciones">Observaciones</label>
+                <textarea placeholder="Escriba si tiene alguna observación para la entrega u otra cosa"
+                    name="observaciones" cols="40" rows="5"></textarea>
+                <!-- <input type="range" name="rango" value="50"> -->
+                <br /><br />
+                <input type="button" name="boton" value="Botón">
+                <button type="button" name="boton2">Botón</button>
+                <br /><br />
+                <input type="reset" value="Resetear">
+                <button type="reset">Resetear</button>
+                <br /><br />
+                <input type="submit" name="enviar" value="Enviar">
+                <button class="fondo_naranja">Enviar</button>
+
+            </form>
+        </div>
+    </main>
+    <footer>
+        <h2>Encabezados</h2>
+        <h1>Título</h1>
+        <h2>SubTítulo</h2>
+        <h3>Título 3</h3>
+    </footer>
+    
+</body>
+</html>
